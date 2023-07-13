@@ -28,7 +28,10 @@ $ pip install -r requirements.txt
 ```
 
 ## Usage
-Add instructions on how to use your project for the end-user.
+```bash
+# Run the application
+$ python main.py
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
