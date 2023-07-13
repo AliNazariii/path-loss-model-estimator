@@ -34,11 +34,12 @@ if __name__ == "__main__":
     beta_estimate = -slope
     P0_estimate = intercept
 
-    # Estimate the noise variance (sigma squared) by calculating the residuals
+    # Estimate the noise standard deviation (sigma) by calculating the residuals
     residuals = Pr - (P0_estimate - beta_estimate * X)
     sigma_squared_estimate = np.var(residuals)
+    sigma_estimate = np.sqrt(sigma_squared_estimate)
 
     print("Estimated Parameters:\n")
-    print("Transmitted Power (P0) : {:.2f} dBm".format(P0_estimate))
-    print("Path Loss Exponent (beta)  : {:.2f}".format(beta_estimate))
-    print("Gaussian Noise Variance : {:.2f}".format(sigma_squared_estimate))
+    print("Power (P0): {:.2f} dBm".format(P0_estimate))
+    print("Path Loss Exponent (beta): {:.2f}".format(beta_estimate))
+    print("Gaussian Noise Standard Deviation: {:.2f}".format(sigma_estimate))
