@@ -16,6 +16,7 @@ def calc_distances(df: pd.DataFrame):
 
 if __name__ == "__main__":
     df = prepare_data()
+    # df = pd.read_csv("drive_test.csv")
     calc_distances(df)
 
     df = df[df['distance'] > 0.0]
